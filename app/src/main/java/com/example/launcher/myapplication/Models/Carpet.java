@@ -3,8 +3,16 @@ package com.example.launcher.myapplication.Models;
 import androidx.annotation.NonNull;
 
 public class Carpet implements Comparable<Carpet>{
-    int id, price;
-    String path;
+    private int id, price;
+    private String path;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getPrice() {
         return price;

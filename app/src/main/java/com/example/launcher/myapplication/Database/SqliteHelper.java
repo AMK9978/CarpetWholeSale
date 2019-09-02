@@ -10,8 +10,6 @@ public class SqliteHelper extends SQLiteOpenHelper {
     static final String PRICE = "Price";
     static final String CARPET_ID = "Carpet_id";
     static final String PATH = "Path";
-    static final String BOUGHT_REPORTS_TABLE_NAME = "BoughtReports";
-    static final String SOLD_REPORTS_TABLE_NAME = "SoldReports";
     static final String SELLERS_TABLE_NAME = "SellersTable";
     static final String BUYERS_TABLE_NAME = "BuyersTable";
     static final String DATE = "Date";
@@ -20,8 +18,7 @@ public class SqliteHelper extends SQLiteOpenHelper {
     static final String NAME = "name";
     static final String PHONE = "phone";
     static final String EMAIL = "email";
-    public static String AMOUNT = "";
-
+    static final String REPORTS_TABLE_NAME = "reports";
 
     public SqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, null, 14);
@@ -31,21 +28,21 @@ public class SqliteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table if not exists " + CARPET_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + PRICE + " INTEGER, " + PATH + " TEXT)");
-        db.execSQL("create table if not exists " + BOUGHT_REPORTS_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + CARPET_ID + " INTEGER, " + BUYER_ID + " INTEGER, " + DATE + " TEXT)");
-        db.execSQL("create table if not exists " + SOLD_REPORTS_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + CARPET_ID + " INTEGER, " + SELLER_ID + " INTEGER, " + DATE + " TEXT)");
+
+        db.execSQL("create table if not exists " + REPORTS_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + CARPET_ID + " INTEGER, " + BUYER_ID + " INTEGER, " + SELLER_ID + " INTEGER, " + DATE + " TEXT)");
+
         db.execSQL("create table if not exists " + SELLERS_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + SELLER_ID + " INTEGER, " +  NAME  + " TEXT, " + EMAIL + " TEXT, " + PHONE + " TEXT)");
+                + NAME + " TEXT, " + EMAIL + " TEXT, " + PHONE + " TEXT)");
+
         db.execSQL("create table if not exists " + BUYERS_TABLE_NAME + "( id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + BUYER_ID + " INTEGER, " + NAME + " TEXT, " + EMAIL + " TEXT, " + PHONE + " TEXT)");
+                + NAME + " TEXT, " + EMAIL + " TEXT, " + PHONE + " TEXT)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + CARPET_TABLE_NAME);
-        db.execSQL("drop table if exists " + SOLD_REPORTS_TABLE_NAME);
-        db.execSQL("drop table if exists " + BOUGHT_REPORTS_TABLE_NAME);
+        db.execSQL("drop table if exists " + REPORTS_TABLE_NAME);
         db.execSQL("drop table if exists " + BUYERS_TABLE_NAME);
         db.execSQL("drop table if exists " + SELLERS_TABLE_NAME);
         onCreate(db);

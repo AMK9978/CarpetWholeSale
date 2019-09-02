@@ -41,7 +41,7 @@ public class BoughtReportsAdapter extends RecyclerView.Adapter<BoughtReportsAdap
     @Override
     public void onBindViewHolder(@NonNull Item holder, int position) {
         Report report = reports.get(position);
-        String str = report.getAmount() + " تومان ";
+        String str = report.getCarpet().getPrice() + " تومان ";
         holder.amountText.setText(str);
     }
 

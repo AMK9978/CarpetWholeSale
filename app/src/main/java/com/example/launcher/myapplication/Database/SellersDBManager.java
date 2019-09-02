@@ -60,11 +60,7 @@ public class SellersDBManager {
         if (cursor.moveToFirst()) {
             Merchant merchant;
             do {
-                merchant = new Merchant();
-                merchant.setId(cursor.getInt(cursor.getColumnIndex(SqliteHelper.SELLER_ID)));
-                merchant.setEmail(cursor.getString(cursor.getColumnIndex(SqliteHelper.EMAIL)));
-                merchant.setName(cursor.getString(cursor.getColumnIndex(SqliteHelper.NAME)));
-                merchant.setPhone(cursor.getString(cursor.getColumnIndex(SqliteHelper.PHONE)));
+                merchant = getSellerByID(cursor.getInt(cursor.getColumnIndex(SqliteHelper.SELLER_ID)));
                 list.add(merchant);
             } while (cursor.moveToNext());
         }

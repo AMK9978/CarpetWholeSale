@@ -3,9 +3,8 @@ package com.example.launcher.myapplication.Models;
 
 public class Report {
     private String date;
-    private long amount = 0;
-    private int carpet_id;
-    private int merchant_id;
+    private Carpet carpet;
+    private int seller_id, buyer_id;
 
     public String getDate() {
         return date;
@@ -15,27 +14,27 @@ public class Report {
         this.date = date;
     }
 
-    public long getAmount() {
-        return amount;
+    public Carpet getCarpet() {
+        return carpet;
     }
 
-    public void setAmount(long amount) {
-        this.amount = amount;
+    public void setCarpet(Carpet carpet) {
+        this.carpet = carpet;
     }
 
-    public int getCarpet_id() {
-        return carpet_id;
+    public int getSeller_id() {
+        return seller_id;
     }
 
-    public void setCarpet_id(int carpet_id) {
-        this.carpet_id = carpet_id;
+    public void setSeller_id(int seller_id) {
+        this.seller_id = seller_id;
     }
 
-    public int getMerchant_id() {
-        return merchant_id;
+    public int getBuyer_id() {
+        return buyer_id;
     }
 
-    public void setMerchant_id(int merchant_id) {
-        this.merchant_id = merchant_id;
+    public void setBuyer_id(int buyer_id) {
+        this.buyer_id = buyer_id;
     }
 }

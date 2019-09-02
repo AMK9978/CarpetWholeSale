@@ -46,6 +46,7 @@ public class CarpetDBManager {
                 "id=?", new String[]{String.valueOf(id)}, null, null, null);
         Carpet carpet = new Carpet();
         if (cursor.moveToFirst()) {
+            carpet.setId(cursor.getInt(cursor.getColumnIndex("id")));
             carpet.setPrice(cursor.getInt(cursor.getColumnIndex(SqliteHelper.PRICE)));
             carpet.setPath(cursor.getString(cursor.getColumnIndex(SqliteHelper.PATH)));
         }
@@ -61,9 +62,7 @@ public class CarpetDBManager {
         if (cursor.moveToFirst()) {
             Carpet carpet;
             do {
-                carpet = new Carpet();
-                carpet.setPrice(cursor.getInt(cursor.getColumnIndex(SqliteHelper.PRICE)));
-                carpet.setPath(cursor.getString(cursor.getColumnIndex(SqliteHelper.PATH)));
+                carpet = getCarpetById(cursor.getInt(cursor.getColumnIndex("id")));
                 list.add(carpet);
                 Log.i("TAG","getAll : " + carpet.getPrice() + " , " + carpet.getPath());
             } while (cursor.moveToNext());
