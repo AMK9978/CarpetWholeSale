@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f80303</color>
+    <color name="colorComplementary">#03f8f8</color>
+    <color name="analogous">#f8037e</color>
+    <color name="analogous_sec">#f87e03</color>
+    <color name="triadic">#f8f803</color>
+    <color name="triadic_sec">#03f803</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="yellow_light">#FF9A2D</color>
+    <color name="yellow_dark">#FF9A2D</color>
+    <color name="purple">#8001FF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000</color>
+    <color name="blue_light">#00d2ff</color>
+    <color name="blue_dark">#3a7bd5</color>
+    <color name="triangle">#f29882</color>
+    <color name="triangle_comp">#82f2da</color>
+    <color name="harmoni">#dceb6e</color>
+    <color name="green_light">#a8e063</color>
+    <color name="green_dark">#56ab2f</color>
+    <color name="cream">#FFF9ED</color>
+</resources>

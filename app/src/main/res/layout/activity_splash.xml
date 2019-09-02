@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/analogous"
+    android:orientation="vertical"
+    tools:context=".Splash">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/splash_title"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_height="62dp"
+            android:fontFamily="@font/iran_sans_bold"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:text="فروشگاه آنلاین فرش!"
+            android:layout_marginBottom="16dp"
+            tools:layout_editor_absoluteX="118dp"
+            tools:layout_editor_absoluteY="110dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/image_title"
+        android:layout_centerInParent="true"
+        android:layout_width="265dp"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/logo2"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="215dp" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

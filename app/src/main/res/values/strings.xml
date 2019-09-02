@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CarpetWholeSale</string>
+    <string name="design_tab_name">طراحی فرش جدید</string>
+    <string name="change_tab_name">تغییر فرش</string>
+    <string name="choose1carpet_name">انتخاب فرش نخست</string>
+    <string name="choose2carpet_name">انتخاب فیلتر</string>
+    <string name="title_activity_find">مسیریابی</string>
+    <string name="title_activity_seller">مدیریت</string>
+    <string name="title_activity_buyer">خرید</string>
+    <string name="title_activity_navigation">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="add_tab_name">اضافه کردن فرش</string>
+    <string name="sold_tab_name">گزارش فروش ها</string>
+    <string name="about_carpet_store"><u>درباره فروشگاه فرش</u></string>
+
+</resources>
+
